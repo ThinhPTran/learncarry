@@ -1,7 +1,11 @@
 (defproject learncarry "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.229"]
-                 [reagent "0.6.1"]]
+                 [reagent "0.6.0" :exclusions [cljsjs/react]]
+                 [cljsjs/react-with-addons "15.3.1-0"]
+                 [org.clojure/core.match "0.3.0-alpha4"]
+                 [carry "0.7.0"]
+                 [carry-reagent "0.7.0"]]
 
   :min-lein-version "2.5.3"
 
@@ -18,7 +22,7 @@
   {:dev
    {:dependencies []
 
-    :plugins      [[lein-figwheel "0.5.10"]]
+    :plugins      [[lein-figwheel "0.5.10" :exclusions [org.clojure/clojure]]]
     }}
 
   :cljsbuild
